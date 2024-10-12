@@ -35,7 +35,7 @@ const Projects: FunctionComponent<ProjectsProps> = () => {
                         return <Image 
                         key={"project-"+project.title+"-"+idx}
                         src={"/images/technologies/" + tech} width={50} height={50} 
-                        className={`w-[90%] h-[90%] object-scale-down`} alt={"tech"} />
+                        className={`w-[70%] h-[70%] object-scale-down`} alt={"tech"} />
                     })}
                 </div>
             </div>
