@@ -124,7 +124,7 @@ const Projects: FunctionComponent<ProjectsProps> = () => {
             demo: undefined,
             github: "https://github.com/MoAdelEzz/whatsapp-clone",
             image: "/images/projects/laptopia.png",
-            technologies: ["react.png", "java.png", "mongo.svg"],
+            technologies: ["react.png", "Java.png", "mongo.svg"],
             link: "https://wassup-moadelezzs-projects.vercel.app"
         },
 
@@ -135,7 +135,7 @@ const Projects: FunctionComponent<ProjectsProps> = () => {
             demo: undefined,
             github: "https://github.com/MoAdelEzz/whatsapp-clone",
             image: "/images/projects/laptopia.png",
-            technologies: ["C-sharp.png", "unity.png"],
+            technologies: ["c-sharp.png", "unity.png"],
             link: "https://wassup-moadelezzs-projects.vercel.app"
         },
 
