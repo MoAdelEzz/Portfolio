@@ -6,9 +6,7 @@ interface FooterProps {
  
 const Footer: FunctionComponent<FooterProps> = () => {
     return (  
-        <div className="h-14 w-full">
-
-        </div>
+        <div className="h-14 w-full" />
     );
 }
  

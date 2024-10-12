@@ -1,9 +1,9 @@
 'use client'
 
 import { FunctionComponent } from "react";
-import {  Brain, Code, CodeXml, Contact, Info, Menu, MinusIcon, PlusIcon, TableProperties } from 'lucide-react'
+import {  Brain, Code, CodeXml, Contact, Info, Menu, TableProperties } from 'lucide-react'
 import { Button } from "@/components/ui/button";
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import Link from "next/link";
 import ThemeToggler from "./theme-toggler";
 

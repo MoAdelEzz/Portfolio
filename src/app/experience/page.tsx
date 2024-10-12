@@ -1,7 +1,7 @@
 'use client'
 
 import { Separator } from "@/components/ui/separator";
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import Image from 'next/image'
 import { CircleDot } from "lucide-react";
 
