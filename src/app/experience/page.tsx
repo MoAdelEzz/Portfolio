@@ -132,7 +132,7 @@ const Experience: FunctionComponent<ExperienceProps> = () => {
                     {
                         Array.from({length: 7}).map((_: any, idx: number) => {
                             return (
-                                <CarouselItem key={idx} 
+                                <CarouselItem key={"slide-"+idx} 
                                 id={"slide-" + idx}
                                 style={{backgroundImage: `url('/images/certificates/cert-${idx + 1}.jpg')`}}
                                 className={`basis-full h-[480px] bg-[length:100%_100%] bg-no-repeat 
@@ -153,7 +153,9 @@ const Experience: FunctionComponent<ExperienceProps> = () => {
                 <Separator orientation="vertical" className="absolute h-full"/>
                 
                 {experinces.map((exp : Experience, idx: number) => (
-                    <div className="flex flex-row bg-background w-full h-48 gap-12 relative z-20">
+                    <div 
+                    key={"exp-" + idx}
+                    className="flex flex-row bg-background w-full h-48 gap-12 relative z-20">
                         {idx % 2 === 0 && <div className="flex-1 h-full hidden lg:block"></div>}
 
                         { generateExperienceCard(exp, idx) }

@@ -26,11 +26,15 @@ type ProjectItem = {
 const Projects: FunctionComponent<ProjectsProps> = () => {
 
     const makeProjectCard = (project: ProjectItem) => {
-        return <div className="w-full lg:w-[45%] max-h-64  flex py-4 border-2 bg-background border-border rounded-xl">
+        return <div 
+        key={"project"+project.title}
+        className="w-full lg:w-[45%] max-h-64  flex py-4 border-2 bg-background border-border rounded-xl">
             <div className="w-1/4 px-4 h-full"> 
                 <div className="w-full h-full flex flex-col gap-2 items-center justify-start">
-                    {project.technologies?.map((tech: string) => {
-                        return <Image src={"/images/technologies/" + tech} width={50} height={50} 
+                    {project.technologies?.map((tech: string, idx: number) => {
+                        return <Image 
+                        key={"project-"+project.title+"-"+idx}
+                        src={"/images/technologies/" + tech} width={50} height={50} 
                         className={`w-[90%] h-[90%] object-scale-down`} alt={"tech"} />
                     })}
                 </div>
@@ -40,7 +44,9 @@ const Projects: FunctionComponent<ProjectsProps> = () => {
             <div className="w-full flex flex-col gap-2"> 
                     <h1 className="text-xl font-extrabold">{project.title}</h1>
                     <h2 className="flex flex-wrap gap-2">{project.tags?.map((tag: string, idx: number) => {
-                        return <span className="rounded-3xl capitalize text-xs text-muted-foreground w-fit text-center border-2 border-border px-4 py-1">{tag}</span>
+                        return <span 
+                        key={"project-"+project.title+"tag-"+idx}
+                        className="rounded-3xl capitalize text-xs text-muted-foreground w-fit text-center border-2 border-border px-4 py-1">{tag}</span>
                     })}</h2>
 
                     <p className="text-xs text-muted-foreground">
