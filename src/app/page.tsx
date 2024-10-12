@@ -8,10 +8,10 @@ export default function Home() {
 
   return (
     
-    <main className="w-full h-full px-2 lg:px-[12.5%] -mt-14 bg-background flex justify-center items-center gap-2">
+    <main className="w-full h-full px-6 lg:px-[12.5%] mt-28 lg:-mt-14 bg-background flex flex-col lg:flex-row justify-center items-center gap-2">
 
-      <div className="text-foreground flex-1">
-        <h1 className="text-6xl font-extrabold mb-4">Mohammed Adel</h1>
+      <div className="text-foreground flex-1 order-2 lg:order-1">
+        <h1 className="text-4xl lg:text-6xl text-center font-extrabold mb-4">Mohammed Adel</h1>
 
         <p className="break-words text-muted-foreground">
           I am a software engineer & senior computer engineering student at Cairo University, 
@@ -22,7 +22,7 @@ export default function Home() {
       </div>
 
 
-      <div className="flex-1">
+      <div className="flex-1 order-1 lg:order-2">
           <Image 
           src={"/images/me.jpg"}
           width={3000}

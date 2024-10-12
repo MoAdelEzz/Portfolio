@@ -6,6 +6,8 @@ import Navbar from "./components/navbar";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Footer from "./components/footer";
 
+import { Overpass } from '@next/font/google';
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -15,6 +17,11 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const overpass = Overpass({
+  weight: ["200", "300", "400", "500", "600", "700"], // Optional: choose the weights you want
+  subsets: ['latin'], // Optional: choose character subsets (e.g., 'latin', 'cyrillic')
 });
 
 export const metadata: Metadata = {
@@ -30,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`w-screen h-screen overflow-x-hidden ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`w-screen h-screen overflow-x-hidden ${overpass.className} antialiased`}
       >
         <ThemeProvider
           attribute="class"

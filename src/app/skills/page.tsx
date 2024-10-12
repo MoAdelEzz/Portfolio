@@ -27,11 +27,13 @@ const Skills: FunctionComponent<SkillsProps> = () => {
         return searchValue === "" || techCard.title.toLowerCase().startsWith(searchValue.toLowerCase()) ?(
             <div className="col-span-12 lg:col-span-4">
                 <div className="relative rounded-xl overflow-hidden
-                flex justify-between items-center pl-4
+                flex justify-between items-center pl-4 group
                 w-full h-24 bg-background border-border border-2">
                     <div className="flex flex-col justify-center text-foreground text-lg tracking-widest capitalize">{techCard.title}</div>
 
-                    <div id="mixer" className="bg-gradient-to-r from-background to-[60%] to-trasparent mix-blend-normal absolute w-full h-full left-[65%] top-0"/>
+                    <div id="mixer" className="bg-gradient-to-r from-background to-[60%] to-trasparent mix-blend-normal 
+                    group-hover:hidden
+                    absolute w-full h-full left-[65%] top-0"/>
                     <Image 
                         src={techCard.image}
                         alt={techCard.title}
@@ -80,7 +82,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
                 <div className="grid grid-cols-12 gap-2 gap-y-4">
                     {makeTechnologyCard({ title: "Reactjs", image: "/images/technologies/react.png" })}
                 
-                    {makeTechnologyCard({ title: "Nextjs", image: "/images/technologies/next.jpeg" })}
+                    {makeTechnologyCard({ title: "Nextjs", image: "/images/technologies/next.webp" })}
                 
                     {makeTechnologyCard({ title: "ChadUI", image: "/images/technologies/chadcn.png" })}
                 
@@ -112,7 +114,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
                 {makeSectionTitle("Other Development Tools")}
 
                 <div className="grid grid-cols-12 gap-2 gap-y-4">
-                    {makeTechnologyCard({ title: "Flutter", image: "/images/technologies/flutter.svg" })}
+                    {makeTechnologyCard({ title: "Flutter", image: "/images/technologies/flutter-2.png" })}
                 
                     {makeTechnologyCard({ title: "Unity Engine", image: "/images/technologies/unity.png" })}
                 
